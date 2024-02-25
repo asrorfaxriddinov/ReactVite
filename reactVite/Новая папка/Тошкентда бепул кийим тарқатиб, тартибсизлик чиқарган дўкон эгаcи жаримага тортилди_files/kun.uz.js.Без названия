@@ -1,0 +1,467 @@
+    // const wordsArray = [
+//   "Война",
+//   "Израиль",
+//   "израильские",
+//   "Израиля",
+//   "израильтян",
+//   "израильским",
+//   "Хамас",
+//   "ХАМАСа",
+//   "Бен-Гурион",
+//   "боевики",
+//   "Газа",
+//   "сектор Газа",
+//   "сектором",
+//   "сектор",
+//   "в секторе Газа",
+//   "военные",
+//   "атака",
+//   "атаки",
+//   "погибших",
+//   "Палестин",
+//   "Палестины",
+//   "палестинских",
+//   "обстрелы",
+//   "Хезболла",
+//   "Исроил",
+//   "Исроилга",
+//   "Исроилнинг",
+//   "ҲАМАС",
+//   "Ғазо",
+//   "Миср Ғазо",
+//   "ҲАМАСнинг",
+//   "Исроилни",
+//   "ҲАМАСни",
+//   "Фаластин",
+//   "Исроилда",
+//   "ҳужуми",
+//   "Ғазо сектори",
+//   "«Ислом жиҳоди»",
+//   "исроиллик",
+//   "ракета",
+//   "Ашкелон",
+//   "Isroil",
+//   "urushining",
+//   "urushi",
+//   "G‘azo sektori",
+//   "TsAHAL",
+//   "hujum",
+//   "Isroilda",
+//   "HAMAS a’zolarining",
+//   "Фаластин"
+// ];
+
+// let checkWords = false;
+// var containerDesktop2 = document.querySelector(".single-content").innerHTML;
+
+// for(i = 0; i < wordsArray.length; i++){
+//   if(containerDesktop2.search(wordsArray[i]) > -1){
+//       checkWords = true;
+//       break
+//   }
+//   else if(containerDesktop2.search(wordsArray[i]) == -1){
+//     checkWords = false ;
+//   }
+// }
+
+
+
+var sportWords = ["Реклама ҳуқуқи асосида",'Reklama huquqi asosida', 'Reklama', 'Реклама']
+var containerDesktop = document.querySelector(".single-content");
+var containerMobile = document.querySelector(".mob-container");
+
+function addNativeAdStyle(){
+  styleForNativeAd = document.createElement('style');
+  head = document.head || document.getElementsByTagName('head')[0];
+  style = document.createElement('style');
+  head.appendChild(style);
+  var styleForNativeAd = '.nativeAdStyle {display:flex; justify-content:center; margin-bottom: 10px;}'
+  style.type = 'text/css';
+  if (style.styleSheet){
+    style.styleSheet.cssText = styleForNativeAd;
+    
+  } else {
+    style.appendChild(document.createTextNode(styleForNativeAd));
+  }
+}
+
+if(containerDesktop){
+  stopWordsDesktop = containerDesktop.innerHTML;
+
+  var checkSportWords = false
+  for(i = 0; i < sportWords.length; i++){
+      if(stopWordsDesktop.search(sportWords[i]) > -1){
+          console.log("Native Network");
+          checkSportWords = true;
+          break
+      }
+      else if(stopWordsDesktop.search(sportWords[i]) == -1){
+          checkSportWords = false ;
+      }
+  }
+  
+  console.log(checkSportWords)
+  
+  if(checkSportWords == false){
+
+function addNativeAdStyle2(tag,csText){
+  styleForNativeAd = document.createElement('style');
+  head = document.head || document.getElementsByTagName('head')[0];
+  style = document.createElement('style');
+  head.appendChild(style);
+  var styleForNativeAd = `${tag}{${csText}}`
+  style.type = 'text/css';
+  if (style.styleSheet){
+    style.styleSheet.cssText = styleForNativeAd;
+    
+  } else {
+    style.appendChild(document.createTextNode(styleForNativeAd));
+  }
+}
+
+
+
+    const contentNew = document.querySelectorAll('.single-content p');
+    console.log(contentNew);
+
+    let rand = Math.random();
+
+    if(rand >= 0 && rand <= 0.4){
+      if(contentNew.length > 1 ) {
+        const native_video = document.createElement('div')
+        native_video.id = "adfox_169745408198144253"
+      
+        contentNew[1].parentNode.insertBefore(native_video, contentNew[1].nextSibling);
+        window.yaContextCb.push(()=>{
+          Ya.adfoxCode.create({
+              ownerId: 389950,
+              containerId: 'adfox_169745408198144253',
+              params: {
+                  p1: 'csrmq',
+                  p2: 'hixy',
+                  puid1: '',
+                  puid2: ''
+              }
+          })
+      })
+      
+      }
+    }else{
+      if(contentNew.length > 1 ){
+        let nativeAdVariable
+        const native_1 = document.createElement('div')
+        native_1.id = "adfox_169538362882029490"
+        nativeAdVariable = native_1;
+        contentNew[1].parentNode.insertBefore(native_1, contentNew[1].nextSibling);
+        addNativeAdStyle2("#adfox_169519442139158531","display: flex; justify-content: center;")
+        window.yaContextCb.push(()=>{
+          Ya.adfoxCode.create({
+              ownerId: 389950,
+              containerId: 'adfox_169538362882029490',
+              params: {
+                  p1: 'csrmo',
+                  p2: 'hixz',
+                  puid1: '',
+                  puid2: ''
+              }
+          })
+      })
+
+
+
+      // native ad refresh start
+
+      // function callNativeAd(){
+      //   const native_1 = document.createElement('div')
+      //     native_1.id = "adfox_169538362882029490"
+      //     nativeAdVariable = native_1;
+      //     contentNew[1].parentNode.insertBefore(native_1, contentNew[1].nextSibling);
+      //     addNativeAdStyle2("#adfox_169519442139158531","display: flex; justify-content: center;")
+      //     window.yaContextCb.push(()=>{
+      //       Ya.adfoxCode.create({
+      //           ownerId: 389950,
+      //           containerId: 'adfox_169538362882029490',
+      //           params: {
+      //               p1: 'csrmo',
+      //               p2: 'hixz',
+      //               puid1: '',
+      //               puid2: ''
+      //           }
+      //       })
+      //   })
+  
+      //   }
+  
+  
+      //   setInterval(() => {
+      //     if(nativeAdVariable){
+      //       if(nativeAdVariable.firstElementChild){
+      //         if(nativeAdVariable.firstElementChild.id.indexOf('yandex_rtb') == -1){
+      //           nativeAdVariable.remove()
+      //           callNativeAd()
+      //         }
+      //       }
+      //     }
+      //   }, 15000);
+  
+        // native ad refresh end
+
+      }
+
+
+      
+
+    }
+
+    
+  }
+}
+
+// mobile start
+
+
+if(containerMobile){
+  
+  stopWordsMobile = containerMobile.innerHTML;
+
+  var checkSportWords = false
+  for(i = 0; i < sportWords.length; i++){
+      if(stopWordsMobile.search(sportWords[i]) > -1){
+          console.log("Native Network");
+          checkSportWords = true;
+          break
+      }
+      else if(stopWordsMobile.search(sportWords[i]) == -1){
+          checkSportWords = false ;
+      }
+  }
+  
+  
+  
+  console.log(checkSportWords)
+  
+  
+  
+  
+  if(checkSportWords == false){
+
+    function addNativeAdStyle2(tag,csText){
+      styleForNativeAd = document.createElement('style');
+      head = document.head || document.getElementsByTagName('head')[0];
+      style = document.createElement('style');
+      head.appendChild(style);
+      var styleForNativeAd = `${tag}{${csText}}`
+      style.type = 'text/css';
+      if (style.styleSheet){
+        style.styleSheet.cssText = styleForNativeAd;
+        
+      } else {
+        style.appendChild(document.createTextNode(styleForNativeAd));
+      }
+    }
+
+
+
+    const contentNew = document.querySelectorAll('.detail-content p');
+    console.log(contentNew);
+
+    let rand = Math.random();
+    // console.log(rand);
+
+    if(rand >= 0 && rand <= 1){
+        if(contentNew.length > 1 ){
+        //   const native_scroll = document.createElement('div')
+        //   native_scroll.id = "adfox_169538362705831364"
+        
+        //   contentNew[1].parentNode.insertBefore(native_scroll, contentNew[1].nextSibling);
+        //   window.yaContextCb.push(()=>{
+        //     Ya.adfoxCode.create({
+        //         ownerId: 389950,
+        //         containerId: 'adfox_169538362705831364',
+        //         params: {
+                    // p1: 'csrmp',
+                    // p2: 'hiya',
+                    // puid1: '',
+                    // puid2: ''
+        //         }
+        //     })
+        // })
+
+        var nativeScrollContainer
+        const native_scroll = document.createElement('div')
+        native_scroll.id = "a1";
+        nativeScrollContainer = native_scroll;
+        contentNew[1].parentNode.insertBefore(native_scroll, contentNew[1].nextSibling);
+        // addNativeAdStyle("#a1","min-height: 100vh;")
+        // setTimeout(function goTo(){
+        //   if(document.querySelector('#a1').firstChild){
+        //     addNativeAdStyle("#a1","min-height: 100vh;")
+        //   }
+        // },1000)
+        
+        window.yaContextCb.push(()=>{
+          Ya.adfoxCode.create({
+              ownerId: 389950,
+              containerId: 'a1',
+              params: {
+                    p1: 'csrmp',
+                    p2: 'hiya',
+                    puid1: '',
+                    puid2: ''
+              }
+          })
+      })
+        
+
+
+  
+  // function callMyRefresh(){
+  //       const native_scroll = document.createElement('div')
+  //       native_scroll.id = "cont2";
+  //       nativeScrollContainer = native_scroll;
+  //       contentNew[1].parentNode.insertBefore(native_scroll, contentNew[1].nextSibling);
+  //     // addNativeAdStyle("#cont2","min-height: 100vh;")
+  //     setTimeout(function goTo(){
+  //       if(document.querySelector('#cont2').firstChild){
+  //         addNativeAdStyle("#cont2","min-height: 100vh;")
+  //       }
+  //     },1000)
+    
+  //       window.yaContextCb.push(()=>{
+  //           Ya.adfoxCode.create({
+  //               ownerId: 389950,
+  //               containerId: 'cont2',
+  //               params: {
+  //                   p1: 'csrmp',
+  //                   p2: 'hiya',
+  //                   puid1: '',
+  //                   puid2: ''
+  //               }, onError: function(error) { 
+  //                   var nativeScrollContainer
+  //   const native_scroll = document.createElement('div')
+  //   native_scroll.id = "cont3";
+  //   nativeScrollContainer = native_scroll;
+  //   contentNew[1].parentNode.insertBefore(native_scroll, contentNew[1].nextSibling);
+  //   // addNativeAdStyle("#cont3","min-height: 100vh;")
+  //   setTimeout(function goTo(){
+  //     if(document.querySelector('#cont3').firstChild){
+  //       addNativeAdStyle("#cont3","min-height: 100vh;")
+  //     }
+  //   },1000)
+    
+  //   window.yaContextCb.push(()=>{
+  //       Ya.adfoxCode.create({
+  //           ownerId: 389950,
+  //           containerId: 'cont3',
+  //           params: {
+  //                   p1: 'csrmp',
+  //                   p2: 'hiya',
+  //                   puid1: '',
+  //                   puid2: ''
+  //           }
+  //       })
+  //   })
+  //                },
+  //               onLoad: function(data) { /* код */ },
+  //               onRender: function() { /* код */ },
+  //               onStub: function() { 
+  //                   // const native_scroll = document.createElement('div')
+  //                   // native_scroll.id = "a4";
+  //                   // nativeScrollContainer = native_scroll;
+  //                   // contentNew[1].parentNode.insertBefore(native_scroll, contentNew[1].nextSibling);
+  //                   // addNativeAdStyle("#a4","min-height: 100vh;")
+    
+  //                   // window.yaContextCb.push(()=>{
+  //                   //     Ya.adfoxCode.create({
+  //                   //         ownerId: 389950,
+  //                   //         containerId: 'a4',
+  //                   //         params: {
+  //                   //           p1: 'cobat',
+  //                   //           p2: 'hcbe',
+  //                   //           puid1: '',
+  //                   //           puid2: '',
+  //                   //           puid3: '',
+  //                   //           puid4: '',
+  //                   //           puid5: ''
+  //                   //         }
+  //                   //     })
+  //                   // })
+  //                }
+  //           })
+  //       })
+      
+  //       }
+      
+      
+  //       setTimeout(function callNative(){
+  //           if(nativeScrollContainer){
+  //               if(nativeScrollContainer.firstElementChild){
+  //                 if(nativeScrollContainer.firstElementChild.id.indexOf('yandex_rtb') == -1){
+  //                   nativeScrollContainer.remove()
+  //                   callMyRefresh()
+  //                 }
+  //               }
+  //             }
+      
+  //             setTimeout(callNative,30000)
+  //       },30000)
+
+
+
+
+
+        }
+    }
+
+    if(contentNew.length > 4 ){
+      const native_1 = document.createElement('div')
+      native_1.id = "adfox_169538362882029490"
+      contentNew[4].parentNode.insertBefore(native_1, contentNew[4].nextSibling);
+      addNativeAdStyle2("#adfox_169538362882029490","display: flex; justify-content: center;")
+        window.yaContextCb.push(()=>{
+          Ya.adfoxCode.create({
+              ownerId: 389950,
+              containerId: 'adfox_169538362882029490',
+              params: {
+                  p1: 'csrmo',
+                  p2: 'hixz',
+                  puid1: '',
+                  puid2: ''
+              }
+          })
+      })
+    }
+
+  }
+}
+
+
+
+
+styleForNativeScroll = document.createElement('style');
+head = document.head || document.getElementsByTagName('head')[0];
+style = document.createElement('style');
+head.appendChild(style);
+var styleForNativeScroll = '#native_network_interscroller {position: relative; z-index: 999;}  .nativeAdStyle {display:flex; justify-content:center; margin-bottom: 10px;}'
+style.type = 'text/css';
+if (style.styleSheet){
+  style.styleSheet.cssText = styleForNativeScroll;
+  
+} else {
+  style.appendChild(document.createTextNode(styleForNativeScroll));
+}
+
+
+window.caramelPreroll = {
+  prerollURL: 'https://yandex.ru/ads/adfox/389950/getCode?p1=csrmr&p2=hiyh&puid1=&puid2=',
+  skip_time: 7,
+  midroll: false,
+  midrollURL: 'https://yandex.ru/ads/adfox/389950/getCode?p1=csiqf&p2=hiyh',
+  mid_time: 50,
+  mid_skip_time: 7
+};
+
+var caramel_preroll = document.createElement("script");
+caramel_preroll.type = 'text/javascript';
+caramel_preroll.src = "https://ads.nativenetwork.uz/preroll/dist/bundle.js" + "?ts=" + new Date().getTime();
+document.getElementsByTagName("body")[0].appendChild(caramel_preroll);
